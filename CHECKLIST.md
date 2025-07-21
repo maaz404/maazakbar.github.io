@@ -3,6 +3,7 @@
 ## ✅ Completed Tasks
 
 ### File Structure & Development
+
 - [x] Modern React portfolio website created
 - [x] Tailwind CSS styling with dark/light mode
 - [x] Framer Motion animations
@@ -14,6 +15,7 @@
 - [x] CNAME file configured for `maazakbar.tech`
 
 ### Repository Setup
+
 - [x] Files committed to Git
 - [x] Code pushed to GitHub repository
 - [x] GitHub Actions workflow file created
@@ -22,12 +24,14 @@
 ## 🔧 Next Steps (Manual Actions Required)
 
 ### 1. GitHub Repository Settings
+
 1. Go to: `https://github.com/maaz404/maazakbar.github.io/settings/pages`
 2. Under "Source", select: **GitHub Actions**
 3. Under "Custom domain", enter: `maazakbar.tech`
 4. Check "Enforce HTTPS"
 
 ### 2. DNS Configuration
+
 Configure these DNS records with your domain provider for `maazakbar.tech`:
 
 ```
@@ -35,7 +39,7 @@ Type: A
 Name: @
 Value: 185.199.108.153
 
-Type: A  
+Type: A
 Name: @
 Value: 185.199.109.153
 
@@ -53,6 +57,7 @@ Value: maaz404.github.io
 ```
 
 ### 3. Monitor Deployment
+
 1. Check GitHub Actions: `https://github.com/maaz404/maazakbar.github.io/actions`
 2. Wait for green checkmark (usually 1-2 minutes)
 3. Visit your live site: `https://maazakbar.tech`
@@ -60,6 +65,7 @@ Value: maaz404.github.io
 ## 🎯 What Happens Next
 
 1. **Automatic Deployment**: Every time you push to `main` branch, GitHub Actions will:
+
    - Install dependencies
    - Build your React app
    - Deploy to GitHub Pages
@@ -70,10 +76,12 @@ Value: maaz404.github.io
 ## 🔍 Monitoring & Maintenance
 
 ### Check Deployment Status
+
 - GitHub Actions tab: Monitor build/deploy progress
 - Repository Insights: View traffic and performance
 
 ### Making Updates
+
 ```bash
 # Make your changes to files
 # Then commit and push:
@@ -110,6 +118,7 @@ To update your portfolio:
 ## ⚡ Performance
 
 Your website includes:
+
 - Code splitting for faster loading
 - Optimized images and assets
 - Minified CSS and JavaScript

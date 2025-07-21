@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiSend, FiGithub, FiLinkedin, FiDownload } from 'react-icons/fi';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiSend,
+  FiGithub,
+  FiLinkedin,
+} from "react-icons/fi";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -16,20 +23,20 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
       // Reset status after 3 seconds
       setTimeout(() => {
         setSubmitStatus(null);
@@ -43,9 +50,9 @@ const Contact = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -54,9 +61,9 @@ const Contact = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
@@ -78,8 +85,8 @@ const Contact = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
           />
           <p className="text-lg text-gray-600 dark:text-dark-600 max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities, interesting projects, 
-            or just having a chat about technology and development.
+            I'm always open to discussing new opportunities, interesting
+            projects, or just having a chat about technology and development.
           </p>
         </motion.div>
 
@@ -97,8 +104,9 @@ const Contact = () => {
                 Let's Connect
               </h3>
               <p className="text-gray-600 dark:text-dark-600 mb-8">
-                Feel free to reach out if you're looking for a developer, have a question, 
-                or just want to connect. I'll do my best to get back to you!
+                Feel free to reach out if you're looking for a developer, have a
+                question, or just want to connect. I'll do my best to get back
+                to you! For employers: I'm happy to share my detailed resume upon request.
               </p>
             </div>
 
@@ -111,8 +119,10 @@ const Contact = () => {
                   <FiMail className="text-white" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900 dark:text-dark-900">Email</h4>
-                  <a 
+                  <h4 className="font-medium text-gray-900 dark:text-dark-900">
+                    Email
+                  </h4>
+                  <a
                     href="mailto:maazakbar404@gmail.com"
                     className="text-primary-600 dark:text-primary-400 hover:underline"
                   >
@@ -129,8 +139,12 @@ const Contact = () => {
                   <FiMapPin className="text-white" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900 dark:text-dark-900">Location</h4>
-                  <p className="text-gray-600 dark:text-dark-600">Islamabad, Pakistan</p>
+                  <h4 className="font-medium text-gray-900 dark:text-dark-900">
+                    Location
+                  </h4>
+                  <p className="text-gray-600 dark:text-dark-600">
+                    Islamabad, Pakistan
+                  </p>
                 </div>
               </motion.div>
 
@@ -142,15 +156,21 @@ const Contact = () => {
                   <FiPhone className="text-white" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900 dark:text-dark-900">Response Time</h4>
-                  <p className="text-gray-600 dark:text-dark-600">Usually within 24 hours</p>
+                  <h4 className="font-medium text-gray-900 dark:text-dark-900">
+                    Response Time
+                  </h4>
+                  <p className="text-gray-600 dark:text-dark-600">
+                    Usually within 24 hours
+                  </p>
                 </div>
               </motion.div>
             </div>
 
             {/* Social Links */}
             <div className="pt-8">
-              <h4 className="font-medium text-gray-900 dark:text-dark-900 mb-4">Follow Me</h4>
+              <h4 className="font-medium text-gray-900 dark:text-dark-900 mb-4">
+                Follow Me
+              </h4>
               <div className="flex gap-4">
                 <motion.a
                   href="https://github.com/maaz404"
@@ -172,29 +192,26 @@ const Contact = () => {
                 >
                   <FiLinkedin size={20} />
                 </motion.a>
-                <motion.a
-                  href="/resume.pdf"
-                  download
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                >
-                  <FiDownload size={20} />
-                </motion.a>
               </div>
             </div>
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div variants={itemVariants} className="bg-white dark:bg-dark-100 rounded-xl shadow-lg p-8">
+          <motion.div
+            variants={itemVariants}
+            className="bg-white dark:bg-dark-100 rounded-xl shadow-lg p-8"
+          >
             <h3 className="text-xl font-semibold text-gray-900 dark:text-dark-900 mb-6">
               Send Me a Message
             </h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-dark-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-dark-700 mb-2"
+                  >
                     Your Name
                   </label>
                   <input
@@ -209,7 +226,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-dark-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-dark-700 mb-2"
+                  >
                     Your Email
                   </label>
                   <input
@@ -226,7 +246,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-dark-700 mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 dark:text-dark-700 mb-2"
+                >
                   Subject
                 </label>
                 <input
@@ -242,7 +265,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-dark-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-dark-700 mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -264,8 +290,8 @@ const Contact = () => {
                 whileTap={{ scale: 0.98 }}
                 className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-primary-600 hover:bg-primary-700 hover:shadow-lg'
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-primary-600 hover:bg-primary-700 hover:shadow-lg"
                 } text-white`}
               >
                 {isSubmitting ? (
@@ -281,7 +307,7 @@ const Contact = () => {
                 )}
               </motion.button>
 
-              {submitStatus === 'success' && (
+              {submitStatus === "success" && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -303,7 +329,8 @@ const Contact = () => {
         >
           <h3 className="text-2xl font-bold mb-4">Ready to Start a Project?</h3>
           <p className="text-lg mb-6 opacity-90">
-            I'm currently available for freelance work and open to discussing new opportunities.
+            I'm currently available for freelance work and open to discussing
+            new opportunities.
           </p>
           <motion.a
             href="mailto:maazakbar404@gmail.com"

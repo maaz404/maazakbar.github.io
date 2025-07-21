@@ -1,17 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  FiCode, 
-  FiDatabase, 
-  FiServer, 
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  FiCode,
+  FiDatabase,
+  FiServer,
   FiGitBranch,
   FiMonitor,
-  FiSmartphone
-} from 'react-icons/fi';
-import { 
-  SiReact, 
-  SiNodedotjs, 
-  SiMongodb, 
+  FiSmartphone,
+} from "react-icons/fi";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
   SiExpress,
   SiJavascript,
   SiTypescript,
@@ -24,57 +24,57 @@ import {
   SiCss3,
   SiBootstrap,
   SiRedux,
-  SiFirebase
-} from 'react-icons/si';
+  SiFirebase,
+} from "react-icons/si";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: "Frontend Development",
       icon: FiMonitor,
-      color: 'from-blue-500 to-cyan-500',
+      color: "from-blue-500 to-cyan-500",
       skills: [
-        { name: 'React', icon: SiReact, level: 90 },
-        { name: 'JavaScript', icon: SiJavascript, level: 95 },
-        { name: 'TypeScript', icon: SiTypescript, level: 80 },
-        { name: 'HTML5', icon: SiHtml5, level: 95 },
-        { name: 'CSS3', icon: SiCss3, level: 90 },
-        { name: 'Tailwind CSS', icon: SiTailwindcss, level: 95 },
-        { name: 'Bootstrap', icon: SiBootstrap, level: 85 },
-        { name: 'Redux', icon: SiRedux, level: 75 }
-      ]
+        { name: "React", icon: SiReact, level: 90 },
+        { name: "JavaScript", icon: SiJavascript, level: 95 },
+        { name: "TypeScript", icon: SiTypescript, level: 80 },
+        { name: "HTML5", icon: SiHtml5, level: 95 },
+        { name: "CSS3", icon: SiCss3, level: 90 },
+        { name: "Tailwind CSS", icon: SiTailwindcss, level: 95 },
+        { name: "Bootstrap", icon: SiBootstrap, level: 85 },
+        { name: "Redux", icon: SiRedux, level: 75 },
+      ],
     },
     {
-      title: 'Backend Development',
+      title: "Backend Development",
       icon: FiServer,
-      color: 'from-green-500 to-emerald-500',
+      color: "from-green-500 to-emerald-500",
       skills: [
-        { name: 'Node.js', icon: SiNodedotjs, level: 85 },
-        { name: 'Express.js', icon: SiExpress, level: 85 },
-        { name: 'MongoDB', icon: SiMongodb, level: 80 },
-        { name: 'Firebase', icon: SiFirebase, level: 75 },
-        { name: 'Python', icon: SiPython, level: 70 }
-      ]
+        { name: "Node.js", icon: SiNodedotjs, level: 85 },
+        { name: "Express.js", icon: SiExpress, level: 85 },
+        { name: "MongoDB", icon: SiMongodb, level: 80 },
+        { name: "Firebase", icon: SiFirebase, level: 75 },
+        { name: "Python", icon: SiPython, level: 70 },
+      ],
     },
     {
-      title: 'DevOps & Tools',
+      title: "DevOps & Tools",
       icon: FiGitBranch,
-      color: 'from-purple-500 to-pink-500',
+      color: "from-purple-500 to-pink-500",
       skills: [
-        { name: 'Git', icon: SiGit, level: 90 },
-        { name: 'GitHub', icon: SiGithub, level: 95 },
-        { name: 'Docker', icon: SiDocker, level: 70 }
-      ]
+        { name: "Git", icon: SiGit, level: 90 },
+        { name: "GitHub", icon: SiGithub, level: 95 },
+        { name: "Docker", icon: SiDocker, level: 70 },
+      ],
     },
     {
-      title: 'Mobile Development',
+      title: "Mobile Development",
       icon: FiSmartphone,
-      color: 'from-orange-500 to-red-500',
+      color: "from-orange-500 to-red-500",
       skills: [
-        { name: 'React Native', icon: SiReact, level: 75 },
-        { name: 'Mobile UI/UX', icon: FiSmartphone, level: 80 }
-      ]
-    }
+        { name: "React Native", icon: SiReact, level: 75 },
+        { name: "Mobile UI/UX", icon: FiSmartphone, level: 80 },
+      ],
+    },
   ];
 
   const containerVariants = {
@@ -83,9 +83,9 @@ const Skills = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -94,9 +94,9 @@ const Skills = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
@@ -118,7 +118,8 @@ const Skills = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
           />
           <p className="text-lg text-gray-600 dark:text-dark-600 max-w-2xl mx-auto">
-            Here are the technologies and tools I work with to bring ideas to life.
+            Here are the technologies and tools I work with to bring ideas to
+            life.
           </p>
         </motion.div>
 
@@ -136,7 +137,9 @@ const Skills = () => {
               className="bg-white dark:bg-dark-100 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-6">
-                <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}>
+                <div
+                  className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}
+                >
                   <category.icon className="text-white" size={24} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-dark-900">
@@ -150,15 +153,18 @@ const Skills = () => {
                     key={skill.name}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ 
+                    transition={{
                       delay: categoryIndex * 0.1 + skillIndex * 0.05,
-                      duration: 0.5 
+                      duration: 0.5,
                     }}
                     className="space-y-2"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
-                        <skill.icon className="mr-3 text-primary-500" size={20} />
+                        <skill.icon
+                          className="mr-3 text-primary-500"
+                          size={20}
+                        />
                         <span className="font-medium text-gray-900 dark:text-dark-900">
                           {skill.name}
                         </span>
@@ -167,16 +173,16 @@ const Skills = () => {
                         {skill.level}%
                       </span>
                     </div>
-                    
+
                     <div className="w-full bg-gray-200 dark:bg-dark-300 rounded-full h-2">
                       <motion.div
                         className={`h-2 rounded-full bg-gradient-to-r ${category.color}`}
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
-                        transition={{ 
+                        transition={{
                           delay: categoryIndex * 0.1 + skillIndex * 0.05 + 0.2,
                           duration: 0.8,
-                          ease: "easeOut"
+                          ease: "easeOut",
                         }}
                       />
                     </div>
@@ -197,24 +203,24 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-dark-900 text-center mb-8">
             Additional Technologies & Concepts
           </h3>
-          
+
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'REST APIs',
-              'GraphQL',
-              'JWT Authentication',
-              'Responsive Design',
-              'Progressive Web Apps',
-              'CI/CD',
-              'Agile Methodology',
-              'Test-Driven Development',
-              'Clean Code',
-              'Design Patterns',
-              'Data Structures',
-              'Algorithms',
-              'Version Control',
-              'Code Review',
-              'Performance Optimization'
+              "REST APIs",
+              "GraphQL",
+              "JWT Authentication",
+              "Responsive Design",
+              "Progressive Web Apps",
+              "CI/CD",
+              "Agile Methodology",
+              "Test-Driven Development",
+              "Clean Code",
+              "Design Patterns",
+              "Data Structures",
+              "Algorithms",
+              "Version Control",
+              "Code Review",
+              "Performance Optimization",
             ].map((skill, index) => (
               <motion.span
                 key={skill}
@@ -238,10 +244,10 @@ const Skills = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { label: 'Technologies', value: '15+', icon: FiCode },
-            { label: 'Projects', value: '25+', icon: FiDatabase },
-            { label: 'Experience', value: '3+', icon: FiServer },
-            { label: 'Certifications', value: '5+', icon: FiGitBranch }
+            { label: "Technologies", value: "15+", icon: FiCode },
+            { label: "Projects", value: "25+", icon: FiDatabase },
+            { label: "Experience", value: "3+", icon: FiServer },
+            { label: "Certifications", value: "5+", icon: FiGitBranch },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

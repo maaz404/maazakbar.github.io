@@ -33,22 +33,26 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
 ## 🚀 Quick Start
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/maaz404/maazakbar.github.io.git
    cd maazakbar.github.io
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start development server**
+
    ```bash
    npm start
    ```
 
 4. **Build for production**
+
    ```bash
    npm run build
    ```
@@ -90,6 +94,7 @@ To customize this portfolio for your own use:
 ## 📱 Responsive Design
 
 The website is fully responsive and optimized for:
+
 - 📱 Mobile devices (320px+)
 - 📟 Tablets (768px+)
 - 🖥️ Desktop (1024px+)
@@ -98,6 +103,7 @@ The website is fully responsive and optimized for:
 ## 🌙 Dark Mode
 
 Features a beautiful dark mode toggle that:
+
 - Remembers user preference
 - Smooth transitions between themes
 - Optimized color schemes for both modes

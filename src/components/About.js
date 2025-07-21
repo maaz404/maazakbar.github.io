@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiCode, FiUsers, FiAward, FiHeart } from 'react-icons/fi';
+import React from "react";
+import { motion } from "framer-motion";
+import { FiCode, FiUsers, FiAward, FiHeart } from "react-icons/fi";
 
 const About = () => {
   const containerVariants = {
@@ -9,9 +9,9 @@ const About = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -20,16 +20,16 @@ const About = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   const stats = [
-    { icon: FiCode, label: 'Projects', value: '10+' },
-    { icon: FiUsers, label: 'Collaborations', value: '5+' },
-    { icon: FiAward, label: 'Years Experience', value: '3+' },
-    { icon: FiHeart, label: 'Technologies', value: '15+' },
+    { icon: FiCode, label: "Projects", value: "10+" },
+    { icon: FiUsers, label: "Collaborations", value: "5+" },
+    { icon: FiAward, label: "Years Experience", value: "3+" },
+    { icon: FiHeart, label: "Technologies", value: "15+" },
   ];
 
   return (
@@ -52,7 +52,7 @@ const About = () => {
                 <div className="w-full h-64 bg-gradient-to-br from-primary-400 via-purple-500 to-cyan-400 rounded-lg flex items-center justify-center text-4xl font-bold text-white mb-6">
                   About Me
                 </div>
-                
+
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat, index) => (
@@ -64,7 +64,10 @@ const About = () => {
                       whileHover={{ scale: 1.05 }}
                       className="text-center p-4 bg-gray-50 dark:bg-dark-200 rounded-lg"
                     >
-                      <stat.icon className="mx-auto text-primary-500 mb-2" size={24} />
+                      <stat.icon
+                        className="mx-auto text-primary-500 mb-2"
+                        size={24}
+                      />
                       <div className="text-2xl font-bold text-gray-900 dark:text-dark-900">
                         {stat.value}
                       </div>
@@ -102,24 +105,26 @@ const About = () => {
               variants={itemVariants}
             >
               <p>
-                I'm a final year Computer Science student at COMSATS University Islamabad 
-                with a passion for creating innovative digital solutions. My journey in 
-                tech began with curiosity about how websites work, and has evolved into 
-                a deep appreciation for clean, efficient code and user-centric design.
+                I'm a final year Computer Science student at COMSATS University
+                Islamabad with a passion for creating innovative digital
+                solutions. My journey in tech began with curiosity about how
+                websites work, and has evolved into a deep appreciation for
+                clean, efficient code and user-centric design.
               </p>
-              
+
               <p>
-                I specialize in front-end development with React and have experience 
-                building full-stack applications using the MERN stack. What excites me 
-                most is the intersection of technology and creativity - turning ideas 
-                into interactive experiences that solve real problems.
+                I specialize in front-end development with React and have
+                experience building full-stack applications using the MERN
+                stack. What excites me most is the intersection of technology
+                and creativity - turning ideas into interactive experiences that
+                solve real problems.
               </p>
-              
+
               <p>
-                Recently, I've been exploring AI integration in web applications and 
-                DevOps practices to improve development workflows. I believe in 
-                continuous learning and staying updated with the latest technologies 
-                in our rapidly evolving field.
+                Recently, I've been exploring AI integration in web applications
+                and DevOps practices to improve development workflows. I believe
+                in continuous learning and staying updated with the latest
+                technologies in our rapidly evolving field.
               </p>
             </motion.div>
 
@@ -130,14 +135,14 @@ const About = () => {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  'Front-end Development',
-                  'MERN Stack',
-                  'AI Integration',
-                  'DevOps',
-                  'Open Source',
-                  'UI/UX Design',
-                  'Clean Code',
-                  'Problem Solving'
+                  "Front-end Development",
+                  "MERN Stack",
+                  "AI Integration",
+                  "DevOps",
+                  "Open Source",
+                  "UI/UX Design",
+                  "Clean Code",
+                  "Problem Solving",
                 ].map((interest, index) => (
                   <motion.span
                     key={interest}
@@ -154,7 +159,10 @@ const About = () => {
             </motion.div>
 
             {/* Education */}
-            <motion.div variants={itemVariants} className="bg-white dark:bg-dark-100 p-6 rounded-lg shadow-md">
+            <motion.div
+              variants={itemVariants}
+              className="bg-white dark:bg-dark-100 p-6 rounded-lg shadow-md"
+            >
               <h3 className="text-xl font-semibold text-gray-900 dark:text-dark-900 mb-3">
                 Education
               </h3>

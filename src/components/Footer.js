@@ -1,10 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiHeart, FiGithub, FiLinkedin, FiMail, FiArrowUp } from 'react-icons/fi';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  FiHeart,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiArrowUp,
+} from "react-icons/fi";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const currentYear = new Date().getFullYear();
@@ -30,9 +36,11 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold gradient-text">Sheikh Maaz Akbar</h3>
+            <h3 className="text-2xl font-bold gradient-text">
+              Sheikh Maaz Akbar
+            </h3>
             <p className="text-gray-300 dark:text-dark-600 leading-relaxed">
-              Final Year Computer Science Student passionate about creating 
+              Final Year Computer Science Student passionate about creating
               innovative web solutions and exploring the latest technologies.
             </p>
             <div className="flex items-center text-gray-300 dark:text-dark-600">
@@ -58,10 +66,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <div className="space-y-2">
               {[
-                { name: 'About', href: '#about' },
-                { name: 'Projects', href: '#projects' },
-                { name: 'Skills', href: '#skills' },
-                { name: 'Contact', href: '#contact' }
+                { name: "About", href: "#about" },
+                { name: "Projects", href: "#projects" },
+                { name: "Skills", href: "#skills" },
+                { name: "Contact", href: "#contact" },
               ].map((link) => (
                 <motion.a
                   key={link.name}
@@ -72,7 +80,7 @@ const Footer = () => {
                     e.preventDefault();
                     const element = document.querySelector(link.href);
                     if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
+                      element.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
@@ -103,7 +111,7 @@ const Footer = () => {
                 📍 Islamabad, Pakistan
               </div>
             </div>
-            
+
             <div className="flex gap-4 pt-2">
               <motion.a
                 href="https://github.com/maaz404"

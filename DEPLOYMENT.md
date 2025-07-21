@@ -5,34 +5,37 @@
 ### Setup Steps:
 
 1. **Repository Settings:**
+
    - Go to your GitHub repository: `https://github.com/maaz404/maazakbar.github.io`
    - Navigate to `Settings` → `Pages`
    - Under "Source", select `GitHub Actions`
    - The workflow will automatically deploy when you push to main branch
 
 2. **Domain Configuration:**
+
    - In the same Pages settings, add custom domain: `maazakbar.tech`
    - GitHub will automatically create a CNAME file (already exists in your repo)
 
 3. **DNS Configuration:**
    Configure these DNS records with your domain provider:
+
    ```
    Type: A
    Name: @
    Value: 185.199.108.153
-   
+
    Type: A
    Name: @
    Value: 185.199.109.153
-   
+
    Type: A
    Name: @
    Value: 185.199.110.153
-   
+
    Type: A
    Name: @
    Value: 185.199.111.153
-   
+
    Type: CNAME
    Name: www
    Value: maaz404.github.io
@@ -41,6 +44,7 @@
 ### How It Works:
 
 1. **Push to GitHub:**
+
    ```bash
    git add .
    git commit -m "Update portfolio"
@@ -56,6 +60,7 @@
 ### Workflow Details:
 
 The `.github/workflows/deploy.yml` file contains:
+
 - **Build Job:** Installs dependencies, builds the React app
 - **Deploy Job:** Deploys the built files to GitHub Pages
 - **Triggers:** Runs on every push to main branch (excludes README changes)
@@ -103,6 +108,7 @@ maazakbar.github.io/
 ## Deployment Monitoring
 
 1. **Check Build Status:**
+
    - Go to `Actions` tab in your GitHub repository
    - Monitor the deployment workflow
    - Check for any build errors
@@ -116,15 +122,18 @@ maazakbar.github.io/
 ### Common Issues:
 
 1. **DNS Not Propagating:**
+
    - DNS changes can take 24-48 hours to propagate globally
    - Use `nslookup maazakbar.tech` to check DNS status
 
 2. **Build Failures:**
+
    - Check the Actions tab for error logs
    - Common issues: missing dependencies, syntax errors
    - Fix locally first: `npm run build`
 
 3. **Site Not Updating:**
+
    - Hard refresh browser (Ctrl+F5)
    - Check if workflow completed successfully
    - Verify you pushed to the main branch
@@ -152,6 +161,7 @@ gh-pages -d build -b gh-pages
 ## Performance Optimization
 
 The build process includes:
+
 - ✅ Code splitting and minification
 - ✅ CSS optimization with Tailwind
 - ✅ Image optimization

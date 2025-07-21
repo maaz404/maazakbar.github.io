@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiDownload, FiMapPin } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiEye, FiMapPin } from 'react-icons/fi';
 
 const Hero = () => {
   const containerVariants = {
@@ -27,6 +27,13 @@ const Hero = () => {
 
   const scrollToContact = () => {
     const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToProjects = () => {
+    const element = document.querySelector('#projects');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -101,16 +108,15 @@ const Hero = () => {
               >
                 Get In Touch
               </motion.button>
-              <motion.a
-                href="/resume.pdf"
-                download
+              <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={scrollToProjects}
                 className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 flex items-center gap-2"
               >
-                <FiDownload size={20} />
-                Download Resume
-              </motion.a>
+                <FiEye size={20} />
+                View My Work
+              </motion.button>
             </motion.div>
 
             {/* Social Links */}
