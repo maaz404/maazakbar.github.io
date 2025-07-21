@@ -12,6 +12,7 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
 - **Project Showcase**: Interactive project cards with live demos and source code links
 - **Skills Visualization**: Animated skill bars and technology icons
 - **SEO Optimized**: Meta tags and structured data for better search visibility
+- **Privacy Focused**: No public resume download, contact-based approach
 
 ## 🛠️ Technologies Used
 
@@ -19,16 +20,16 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: React Icons, Simple Icons
-- **Deployment**: GitHub Pages
+- **Deployment**: GitHub Pages with GitHub Actions
 - **Development**: Create React App
 
-## 🎨 Sections
+## � Sections
 
-1. **Hero**: Introduction with call-to-action buttons
-2. **About**: Personal background and education
-3. **Projects**: Featured and additional projects with links
+1. **Hero**: Introduction with "Get In Touch" and "View My Work" buttons
+2. **About**: Personal background, education, and interests
+3. **Projects**: Featured and additional projects with GitHub links
 4. **Skills**: Technical skills with proficiency levels
-5. **Contact**: Contact form and social links
+5. **Contact**: Contact form with professional note about resume availability
 
 ## 🚀 Quick Start
 
@@ -57,86 +58,60 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
    npm run build
    ```
 
-5. **Deploy to GitHub Pages**
-   ```bash
-   npm run deploy
-   ```
+## 🌐 Deployment
+
+The website automatically deploys to GitHub Pages using GitHub Actions whenever you push to the main branch.
+
+**Live Site**: [https://maazakbar.tech](https://maazakbar.tech)
 
 ## 📁 Project Structure
 
 ```
 src/
 ├── components/
-│   ├── Navbar.js          # Navigation component
-│   ├── Hero.js            # Hero section
-│   ├── About.js           # About section
-│   ├── Projects.js        # Projects showcase
-│   ├── Skills.js          # Skills section
+│   ├── Navbar.js          # Navigation with theme toggle
+│   ├── Hero.js            # Hero section with CTA
+│   ├── About.js           # About section with stats
+│   ├── Projects.js        # Project showcase
+│   ├── Skills.js          # Skills with progress bars
 │   ├── Contact.js         # Contact form
 │   └── Footer.js          # Footer component
 ├── App.js                 # Main application component
 ├── index.js              # Application entry point
-├── index.css             # Global styles and Tailwind imports
-└── ...
+└── index.css             # Global styles and Tailwind imports
 ```
 
-## 🎯 Customization
+## � Customization
 
-To customize this portfolio for your own use:
+To customize this portfolio:
 
 1. Update personal information in components
 2. Replace project data with your own projects
-3. Modify skills and technologies
+3. Modify skills and technologies in `Skills.js`
 4. Update social media links
-5. Replace resume PDF
-6. Update CNAME file with your domain
+5. Customize colors in `tailwind.config.js`
 
 ## 📱 Responsive Design
 
-The website is fully responsive and optimized for:
-
-- 📱 Mobile devices (320px+)
+Optimized for all devices:
+- 📱 Mobile (320px+)
 - 📟 Tablets (768px+)
 - 🖥️ Desktop (1024px+)
-- 🖥️ Large screens (1280px+)
 
-## 🌙 Dark Mode
+## 🌙 Features
 
-Features a beautiful dark mode toggle that:
-
-- Remembers user preference
-- Smooth transitions between themes
-- Optimized color schemes for both modes
-
-## 🔧 Performance
-
-- **Optimized Images**: Responsive images and lazy loading
-- **Code Splitting**: Automatic code splitting with React
-- **Minified Assets**: Production builds are minified and optimized
-- **Fast Loading**: Optimized for Core Web Vitals
-
-## 📈 SEO Features
-
-- Meta tags for social media sharing
-- Structured data markup
-- Semantic HTML
-- Fast loading times
-- Mobile-friendly design
-
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your own portfolio. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+- **Dark Mode**: Beautiful dark theme with smooth transitions
+- **Animations**: Framer Motion powered smooth animations
+- **Performance**: Optimized for Core Web Vitals
+- **SEO**: Meta tags and structured data
+- **Privacy**: Contact-first approach, no public personal data
 
 ## 📞 Contact
 
 - **Email**: maazakbar404@gmail.com
 - **LinkedIn**: [sheikhmaazakbar](https://www.linkedin.com/in/sheikhmaazakbar/)
 - **GitHub**: [maaz404](https://github.com/maaz404)
-- **Website**: [maaz.io](https://maaz.io)
+- **Website**: [maazakbar.tech](https://maazakbar.tech)
 
 ---
 
